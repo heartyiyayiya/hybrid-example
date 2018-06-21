@@ -1,0 +1,30 @@
+.modal.modal-in {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0,0,0) scale(1);
+    transform: translate3d(0,0,0) scale(1)
+}
+
+.modal.modal-out {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10999;
+    -webkit-transform: translate3d(0,0,0) scale(.815);
+    transform: translate3d(0,0,0) scale(.815);
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 11000;
+    -webkit-transition-duration: .35s;
+    transition-duration: .35s;
+    -webkit-transition-property: -webkit-transform,opacity,visibility;
+    transition-property: transform,opacity,visibility;
+    -webkit-transform: translate3d(0,0,0) scale(1.185);
+    transform: translate3d(0,0,0) scale(1.185);
+    opacity: 1;
+    visibility: hidden;
+}
+

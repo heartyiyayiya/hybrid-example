@@ -1,0 +1,277 @@
+body, html {position: relative;height: 100%;width: 100%;overflow-x: hidden;}
+body{font-family: Helvetica Neue,Helvetica,Arial,sans-serif;overflow: hidden; -webkit-tap-highlight-color:rgba(0,0,0,0);  -webkit-tap-highlight-color: transparent; -webkit-user-select:none; -moz-user-select:none; user-select: none;-webkit-touch-callout: none;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section,i { margin: 0; padding: 0; box-sizing: border-box;-webkit-box-sizing: border-box;}
+input {line-height: normal;border: none;outline: 0; -webkit-box-shadow: none; -moz-box-shoadow: none; -o-box-shadow: none; box-shadow: none; -webkit-user-modify: read-write-plaintext-only; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+input[type="text"] { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+fieldset, img { border: 0; }
+a:hover, a:active { text-decoration: none; }
+ins, a { text-decoration: none; color: inherit }
+button { overflow: visible; border: 0 none; background-color: transparent; }
+button::-moz-focus-inner, input::-moz-focus-inner { padding: 0; border: 0; }
+textarea, input { background: none; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; -webkit-appearance: none; }
+textarea:focus, input:focus{ -webkit-user-modify: read-write-plaintext-only;}
+input[type=password] { -webkit-text-security: disc; }
+textarea:focus, input:focus, button:focus { outline: none; }
+img{display: block;}
+li{list-style: none;}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #a6a6a6;
+    font-size:28px;
+}
+iframe{border: none;}
+
+h1, h2, h3, h4, h5, h6{
+    font-size: 28px;
+}
+
+.swap-enter {
+    opacity: 0.01;
+    -webkit-transition: opacity 350ms ease-in;
+    transition: opacity 350ms ease-in;
+}
+.swap-enter.swap-enter-active {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.swap-leave {
+    opacity: 1;
+    -webkit-transition: opacity 350ms ease-in;
+    transition: opacity 350ms ease-in;
+}
+.swap-leave.swap-leave-active {
+    opacity: 0;
+}
+
+.flex-box {
+    display: -webkit-box;
+    display: flex;
+}
+
+.flex1 {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+.none{
+    display: none;
+}
+
+
+.border-top{
+    border-top: 1px solid #dee4e7;
+}
+.border-bottom{
+    border-bottom: 1px solid #dee4e7;
+}
+.border-left{
+    border-left: 1px solid #dee4e7;
+}
+.border-right{
+    border-right: 1px solid #dee4e7;
+}
+
+/* border 1px
+.border-bottom:after, .border-top:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #dee4e7;
+    display: block;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+.border-top:before {
+    top: 0;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+}
+.border-bottom:after {
+    bottom: 0;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+.border-left:after,.border-right:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #dee4e7;
+    display: block;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);  
+}
+.border-left:after {
+    left: 0;
+    -webkit-transform-origin: 100% 50%; 
+    transform-origin: 100% 50%;
+}
+.border-right:after {
+    right: 0;
+    -webkit-transform-origin: 100% 50%; 
+    transform-origin: 100% 50%;
+} */
+
+/***box-flex 布局***/
+.flex-box {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flexbox;
+}
+.flex1 {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+}
+
+.flex-vertical-center,
+.flex-align-center{
+    -webkit-box-align: center;
+}
+.flex-center{
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+/***内容溢出省略号***/
+.one-line {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+/***字体大小 font-size***/
+.fs-10 {
+    font-size: 20px
+}
+.fs-11{
+    font-size: 22px;
+}
+.fs-12 {
+    font-size: 24px
+}
+.fs-32{
+    font-size: 64px;
+}
+
+/***字体颜色 font-color***/
+.fc-333 {
+    color: #333
+} 
+.fc-666 {
+    color: #666
+}
+.fc-999 {
+    color: #999
+}
+.fc-fff {
+    color: #fff
+}
+.fc-ccc {
+    color: #ccc
+}
+.fc-f60 {
+    color: #f4334a
+}
+.fc-blue{
+    color: #448AFF;
+}
+
+
+/***清除浮动 clearfix***/
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+.mt-10{
+    margin-top: 20px;
+}
+.mb-10 {
+    margin-bottom: 20px
+}
+.m5-0 {
+    margin: 10px 0
+}
+.pd-15{
+    padding: 15px;
+}
+
+/***内容居左、居中、居右***/
+.ta-l{
+    text-align: left;
+}
+.ta-c{
+    text-align: center;
+}
+.ta-r{
+    text-align: right;
+}
+
+
+
+/*errorModal*/
+/* .errorModal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #E9ECF1;
+}
+.errorModal>div{
+    position: relative;
+    top: 40%;
+    -webkit-transform: translate3d(0,-50%,0);
+    transform: translate3d(0,-50%,0);
+}
+.errorModal .error-text{
+    color: #999;
+    margin-top: 20px;
+}
+.bus_loading{
+    margin: 0 auto;
+    width:260px;
+} */
+
+
+/*icon*/
+/* [class|=icon]{
+    display: block;
+    width: 50px;
+    height: 50px; 
+    background: url(../images/icon.png?v=18) no-repeat;
+    background-size: 640px;
+}
+.icon-arrow-right{
+    width: 14px;
+    height: 24px;
+    margin: 0 30px 0 10px;
+    display: inline-block;
+    background-position: -536px -16px;
+} */
+.icon-err-noNetwork {
+    position: static;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background: url(../images/img_network_disable.png);
+    background-size: 300px;
+}
+.icon-err-noResult {
+    position: static;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background: url(../images/img_noresult.png);
+    background-size: 300px;
+}

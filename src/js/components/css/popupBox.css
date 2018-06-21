@@ -1,0 +1,36 @@
+
+
+.popup-box-wrap{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+}
+
+.popup-box{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 10700;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: -webkit-transform,opacity;
+    transition-property: transform,opacity;
+    display: none;
+    opacity: 0;
+    background: #fff;
+}
+
+
+.popup-box.in{
+
+    opacity:1;
+}
+
+
+.popup-box.out{
+
+    opacity: 0;
+}

@@ -1,0 +1,13 @@
+{
+    "header": {
+        "rspType": "0",
+        "rspCode": "0",
+        "rspDesc": "执行成功"
+    },
+    "body": {
+        "serverTime": "2016-03-10 14:28:54.992",
+        "isSuccess": "1",
+        "description": "执行成功",
+        "code": "0"
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta content="telephone=no" name="format-detection">
+	<meta http-equiv="pragma" content="no-cache"><!-- 禁止浏览器从本地缓存中调阅页面。 -->
+	<meta http-equiv="cache-control" content="no-cache, must-revalidate"> <!--  网页不保存在缓存中，每次访问都刷新页面。  -->
+	<meta http-equiv="expires" content="0"><!-- 网页在缓存中的过期时间为0，一旦网页过期，必须从服务器上重新订阅。 -->
+	<script src="../PublicAssets/lib/rem/rem.1.0.1.min.js"></script>
+	<title></title>
+	<style type="text/css">
+		/*errorModal*/
+		.errorModal{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			background: #E9ECF1;
+		}
+		.errorModal>div{
+			position: relative;
+			top: 40%;
+			-webkit-transform: translate3d(0,-50%,0);
+			transform: translate3d(0,-50%,0);
+		}
+		.errorModal .loadingBox{
+			top: 50%;
+		}
+		.errorModal .error-text{
+		    color: #999;
+		    margin-top: 0.2rem;
+		}
+		.bus_loading{
+			margin: 0 auto;
+			width: 2.6rem;
+		}
+
+	</style>
+</head>
+
+<body>
+
+<div id="root">
+	<div class="errorModal">
+		<div class="loadingBox">
+			<img class="bus_loading" src="images/bus_loading.gif?v=1" /> 
+		</div>
+	</div>
+</div>
+<!--底层js-->
+<script src="../PublicAssets/lib/react/react.1.0.0.min.js"></script>
+<script src="../PublicAssets/lib/react/react-with-addons.1.0.0.min.js"></script>
+<script src="../PublicAssets/lib/react-dom/react-dom.1.0.0.min.js"></script>
+<script src="../PublicAssets/lib/react-redux/react-redux.1.0.0.min.js"></script>
+<script src="../PublicAssets/lib/redux-thunk/redux-thunk.1.0.0.min.js"></script>
+<script src="../PublicAssets/lib/fastclick/fastclick.1.0.0.min.js"></script>
+<!--底层js-->
+</body>
+</html>

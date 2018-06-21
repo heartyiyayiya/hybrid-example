@@ -1,0 +1,193 @@
+
+.dialog-modal{    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 540px;
+    /* margin-left: -270px; */
+    /* margin-top: -130px; */
+    border-radius: 14px;
+    text-align: center;
+    -webkit-transition-duration: .35s;
+    transition-duration: .35s;
+    -webkit-transition-property: -webkit-transform,opacity;
+    transition-property: transform,opacity;
+    /* -webkit-transform: translateZ(0) scale(1.185); */
+    /* transform: translateZ(0) scale(1.185); */
+    opacity: 0;
+    display: none;
+    z-index: 11000;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+}
+
+.dialog-modal.dialog-in{
+    opacity: 1;
+/*    -webkit-transform: translate3d(0,0,0) scale(1);
+    transform: translate3d(0,0,0) scale(1)*/
+}
+
+.dialog-modal.dialog-out{
+    opacity: 0;
+    z-index: 10999;
+/*    -webkit-transform: translate3d(0,0,0) scale(.815);
+    transform: translate3d(0,0,0) scale(.815);*/
+}
+
+
+.dialog-inner {
+    border-radius: 14px 14px 0 0;
+    position: relative;
+    background: #e8e8e8;
+}
+.dialog-inner:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    top: auto;
+    height: 1px;
+    width: 100%;
+    background-color: #b5b5b5;
+    display: block;
+    z-index: 15;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+.dialog-inner:after{
+  -webkit-transform: scaleY(0.33);
+  transform: scaleY(0.33);
+}
+.dialog-title {
+    font-weight: 500;
+    font-size: 36px;
+    text-align: center;
+}
+.dialog-title + .dialog-text {
+    padding: 30px;
+}
+.dialog-buttons {
+    height: 88px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.dialog-buttons.dialog-buttons-vertical {
+    display: block;
+    height: auto;
+}
+.dialog-button {
+    width: 100%;
+    padding: 0 10px;
+    height: 88px;
+    font-size: 34px;
+    line-height: 88px;
+    text-align: center;
+    color: #007aff;
+    background: #e8e8e8;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+}
+.dialog-button:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: auto;
+    bottom: auto;
+    width: 1px;
+    height: 100%;
+    background-color: #b5b5b5;
+    display: block;
+    z-index: 15;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+}
+/*html.pixel-ratio-2 .dialog-button:after {
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}*/
+.dialog-button:after {
+  -webkit-transform: scaleX(0.33);
+  transform: scaleX(0.33);
+}
+.dialog-button:first-child {
+    border-radius: 0 0 0 14px;
+}
+.dialog-button:last-child {
+    border-radius: 0 0 14px 0;
+}
+.dialog-button:last-child:after {
+    display: none;
+}
+.dialog-button:first-child:last-child {
+    border-radius: 0 0 14px 14px;
+}
+.dialog-button.dialog-button-bold {
+    font-weight: 500;
+}
+html:not(.watch-active-state) .dialog-button:active,
+.dialog-button.active-state {
+  background: #d4d4d4;
+}
+.dialog-buttons-vertical .dialog-button {
+    border-radius: 0;
+}
+.dialog-buttons-vertical .dialog-button:after {
+    display: none;
+}
+.dialog-buttons-vertical .dialog-button:before {
+    display: none;
+}
+.dialog-buttons-vertical .dialog-button:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: auto;
+      top: auto;
+      height: 1px;
+      width: 100%;
+      background-color: #b5b5b5;
+      display: block;
+      z-index: 15;
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+}
+/*html.pixel-ratio-2 .dialog-buttons-vertical .dialog-button:after {
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}*/
+.dialog-buttons-vertical .dialog-button:after {
+  -webkit-transform: scaleY(0.33);
+  transform: scaleY(0.33);
+}
+.dialog-buttons-vertical .dialog-button:last-child {
+    border-radius: 0 0 14px 14px;
+}
+.dialog-buttons-vertical .dialog-button:last-child:after {
+    display: none;
+}
+.dialog-no-buttons .dialog-inner {
+    border-radius: 14px;
+}
+.dialog-no-buttons .dialog-inner:after {
+    display: none;
+}
+.dialog-no-buttons .dialog-buttons {
+    display: none;
+}
